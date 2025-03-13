@@ -1,0 +1,10 @@
+vim.wo.number = true
+vim.opt.tabstop = 4         -- Number of spaces that a <Tab> counts for
+vim.opt.shiftwidth = 4      -- Number of spaces to use for each step of (auto)indent
+vim.opt.expandtab = true    -- Use spaces instead of tabs
+vim.o.clipboard = 'unnamedplus' -- Sync clipboard with OS
+vim.o.wrap = true
+vim.o.mouse = 'a'
+vim.o.autoindent = true
+vim.o.ignorecase = true -- Ignore case for search
+vim.o.smartcase = true
