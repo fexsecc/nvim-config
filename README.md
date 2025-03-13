@@ -10,5 +10,5 @@ git clone https://github.com/fexsecc/nvim-config.git ~/.config/nvim && nvim
 ```
 ## Windows
 ```powershell
-git clone https://github.com/fexsecc/nvim-config.git $ENV:USERPROFILE\AppData\Local\nvim && nvim
+git clone https://github.com/fexsecc/nvim-config.git $ENV:USERPROFILE\AppData\Local\nvim
 ```
