@@ -28,6 +28,9 @@ map("i", "<C-k>", "<Up>", { desc = "move up" })
 -- Delete single char without copying into register
 map('n', 'x', '"_x', opts)
 
+-- Change text without copying into register
+map('n', 'c', '"_c', opts)
+
 -- Keep last yanked when pasting
 map('v', 'p', '"_dP', opts)
 
