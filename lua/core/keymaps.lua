@@ -39,6 +39,7 @@ map('n', '<C-d>', '<C-d>zz', opts)
 map('n', '<C-u>', '<C-u>zz', opts)
 map('n', '<C-f>', '<C-f>zz', opts)
 map('n', '<C-b>', '<C-b>zz', opts)
+map('n', '<C-o>', '<C-o>zz', opts)
 
 -- Vertical scroll and center
 map('n', 'n', 'nzzzv', opts)
