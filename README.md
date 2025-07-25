@@ -1,5 +1,3 @@
-# Nvim config!!!
-
 # Install 
 ## Linux/Mac
 ### SSH clone
