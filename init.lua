@@ -15,7 +15,9 @@ vim.opt.rtp:prepend(lazypath)
 require('lazy').setup({
     require('plugins.neotree'),
     require('plugins.tokyonight'),
-    require('plugins.tmuxNavigator'),
+    -- No tmux support on Windows, use smart-splits and wezterm
+    -- require('plugins.tmuxNavigator'),
+    require('plugins.smart-splits'),
     require('plugins.bufferline'),
     require('plugins.lualine'),
     require('plugins.treesitter'),
