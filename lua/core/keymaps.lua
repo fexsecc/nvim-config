@@ -44,7 +44,7 @@ vim.opt.undolevels = 1000        -- Maximum number of undo levels
 vim.opt.undoreload = 10000       -- Maximum number of lines to save for undo
 
 if not isdir(vim.opt.undodir) then
-    os.execute("mkdir " .. tostring(vim.opt.undodir))
+    os.execute("mkdir " .. tostring(vim.opt.undodir._value))
 end
 
 -- unhighlight search
