@@ -8,3 +8,4 @@ vim.o.mouse = 'a'
 vim.o.autoindent = true
 vim.o.ignorecase = true -- Ignore case for search
 vim.o.smartcase = true
+vim.o.cursorline = true
