@@ -58,7 +58,11 @@ map("i", "<C-l>", "<Right>", { desc = "move right" })
 map("i", "<C-j>", "<Down>", { desc = "move down" })
 map("i", "<C-k>", "<Up>", { desc = "move up" })
 
--- Delete single char without copying into register
+-- Substitute char without copying into register
+map('n', 's', '"_s', opts)
+map('v', 's', '"_s', opts)
+
+-- Delete char without copying into register
 map('n', 'x', '"_x', opts)
 map('v', 'x', '"_x', opts)
 
