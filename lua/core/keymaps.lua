@@ -62,13 +62,16 @@ map("i", "<C-k>", "<Up>", { desc = "move up" })
 map('n', 's', '"_s', opts)
 map('v', 's', '"_s', opts)
 
+
 -- Delete char without copying into register
 map('n', 'x', '"_x', opts)
 map('v', 'x', '"_x', opts)
 
+
 -- Change text without copying into register
 map('n', 'c', '"_c', opts)
 map('v', 'c', '"_c', opts)
+
 
 -- Keep last yanked when pasting
 map('v', 'p', '"_dP', opts)
