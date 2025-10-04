@@ -14,7 +14,8 @@ vim.opt.rtp:prepend(lazypath)
 
 require('lazy').setup({
     require('plugins.neotree'),
-    require('plugins.tokyonight'),
+    require('plugins.githubnvim'),
+    --require('plugins.tokyonight'),
     require('plugins.tmuxNavigator'),
     require('plugins.bufferline'),
     require('plugins.lualine'),
