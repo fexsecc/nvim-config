@@ -9,3 +9,6 @@ vim.o.autoindent = true
 vim.o.ignorecase = true -- Ignore case for search
 vim.o.smartcase = true
 vim.o.cursorline = true
+
+-- Unmap F1
+vim.keymap.set({"n","i","v","o","t"}, "<F1>", "<Nop>", {silent = true})
