@@ -192,6 +192,18 @@ return {
           },
         },
       },
+      clangd = {
+        -- optional override cmd (example enables background indexing and sets header cache)
+        -- requires clangd installed (mason package "clangd")
+        cmd = { "clangd", "--background-index", "--header-insertion=never", "--clang-tidy" },
+        filetypes = { "c", "cpp", "objc", "objcpp", "h", "hpp" },
+        -- you already set capabilities below in the loop; you can also add settings if needed:
+        settings = {
+          clangd = {
+            -- example settings; many clangd flags are supplied via cmd instead
+          },
+        },
+      },
     }
 
     -- Ensure the servers and tools above are installed
@@ -201,6 +213,7 @@ return {
     })
     require('mason-tool-installer').setup { ensure_installed = ensure_installed }
 
+    local lspconfig = require('lspconfig')
     for server, cfg in pairs(servers) do
       -- For each LSP server (cfg), we merge:
       -- 1. A fresh empty table (to avoid mutating capabilities globally)
@@ -208,8 +221,9 @@ return {
       -- 3. Any server-specific cfg.capabilities if defined in `servers`
       cfg.capabilities = vim.tbl_deep_extend('force', {}, capabilities, cfg.capabilities or {})
 
-      vim.lsp.config(server, cfg)
-      vim.lsp.enable(server)
+      lspconfig[server].setup(cfg)
+      --vim.lsp.config(server, cfg)
+      --vim.lsp.enable(server)
     end
   end,
 }
