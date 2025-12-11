@@ -143,8 +143,7 @@ return {
       severity_sort = true,
     })
     local servers = {
-      -- ts_ls = {},
-      -- ruff = {},
+      ruff = {},
       pylsp = {
         settings = {
           pylsp = {
@@ -161,16 +160,15 @@ return {
           },
         },
       },
-      -- html = { filetypes = { 'html', 'twig', 'hbs' } },
-      -- cssls = {},
 
-      --tailwindcss = {},
-      --sqlls = {},
-      --terraformls = {},
+      html = { filetypes = { 'html', 'twig', 'hbs' } },
+      cssls = {},
+      ts_ls = {},
 
-      -- dockerls = {},
-      -- jsonls = {},
-      -- yamlls = {},
+      dockerls = {},
+      jsonls = {},
+      yamlls = {},
+
       lua_ls = {
         settings = {
           Lua = {
