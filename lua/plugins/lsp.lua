@@ -143,8 +143,8 @@ return {
       severity_sort = true,
     })
     local servers = {
-      ts_ls = {},
-      ruff = {},
+      -- ts_ls = {},
+      -- ruff = {},
       pylsp = {
         settings = {
           pylsp = {
@@ -161,16 +161,16 @@ return {
           },
         },
       },
-      html = { filetypes = { 'html', 'twig', 'hbs' } },
-      cssls = {},
+      -- html = { filetypes = { 'html', 'twig', 'hbs' } },
+      -- cssls = {},
 
       --tailwindcss = {},
       --sqlls = {},
       --terraformls = {},
 
-      dockerls = {},
-      jsonls = {},
-      yamlls = {},
+      -- dockerls = {},
+      -- jsonls = {},
+      -- yamlls = {},
       lua_ls = {
         settings = {
           Lua = {
@@ -213,7 +213,6 @@ return {
     })
     require('mason-tool-installer').setup { ensure_installed = ensure_installed }
 
-    local lspconfig = require('lspconfig')
     for server, cfg in pairs(servers) do
       -- For each LSP server (cfg), we merge:
       -- 1. A fresh empty table (to avoid mutating capabilities globally)
@@ -221,9 +220,10 @@ return {
       -- 3. Any server-specific cfg.capabilities if defined in `servers`
       cfg.capabilities = vim.tbl_deep_extend('force', {}, capabilities, cfg.capabilities or {})
 
-      lspconfig[server].setup(cfg)
-      --vim.lsp.config(server, cfg)
-      --vim.lsp.enable(server)
+      vim.lsp.enable(server)
+      if cfg then
+        vim.lsp.config(server, cfg)
+      end
     end
   end,
 }
