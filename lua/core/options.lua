@@ -15,3 +15,6 @@ vim.o.cursorline = true
 
 -- Unmap F1
 vim.keymap.set({"n","i","v","o","t"}, "<F1>", "<Nop>", {silent = true})
+-- Enable true color support before plugins/colorschemes
+vim.opt.termguicolors = true
+
