@@ -4,8 +4,14 @@ vim.opt.shiftwidth = 4      -- Number of spaces to use for each step of (auto)in
 vim.opt.expandtab = true    -- Use spaces instead of tabs
 vim.o.clipboard = 'unnamedplus' -- Sync clipboard with OS
 vim.o.wrap = true
+vim.o.linebreak = true         -- wrap at word boundaries
+vim.o.showbreak = "↳ "         -- prefix for wrapped lines
+vim.o.breakindent = true       -- keep indentation on wrapped lines
 vim.o.mouse = 'a'
 vim.o.autoindent = true
 vim.o.ignorecase = true -- Ignore case for search
 vim.o.smartcase = true
 vim.o.cursorline = true
+
+-- Unmap F1
+vim.keymap.set({"n","i","v","o","t"}, "<F1>", "<Nop>", {silent = true})

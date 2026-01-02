@@ -43,8 +43,8 @@ end
 vim.opt.undolevels = 1000        -- Maximum number of undo levels
 vim.opt.undoreload = 10000       -- Maximum number of lines to save for undo
 
-if not isdir(vim.opt.undodir) then
-    os.execute("mkdir " .. tostring(vim.opt.undodir))
+if not isdir(vim.opt.undodir._value) then
+    os.execute("mkdir " .. tostring(vim.opt.undodir._value))
 end
 
 -- unhighlight search
@@ -66,9 +66,11 @@ map('v', 's', '"_s', opts)
 map('n', 'x', '"_x', opts)
 map('v', 'x', '"_x', opts)
 
+
 -- Change text without copying into register
 map('n', 'c', '"_c', opts)
 map('v', 'c', '"_c', opts)
+
 
 -- Keep last yanked when pasting
 map('v', 'p', '"_dP', opts)
