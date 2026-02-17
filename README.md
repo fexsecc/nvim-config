@@ -1,4 +1,4 @@
-# Install
+# Installing
 ## Windows (powershell)
 ### SSH clone
 ```powershell
