@@ -193,7 +193,7 @@ return {
       clangd = {
         -- optional override cmd (example enables background indexing and sets header cache)
         -- requires clangd installed (mason package "clangd")
-        cmd = { "clangd", "--background-index", "--header-insertion=never", "--clang-tidy" },
+        cmd = { "clangd", "--background-index", "--experimental-modules-support", "--header-insertion=never", "--clang-tidy" },
         filetypes = { "c", "cpp", "objc", "objcpp", "h", "hpp" },
         -- you already set capabilities below in the loop; you can also add settings if needed:
         settings = {
