@@ -209,10 +209,6 @@ return {
         enable_import_completion = true,
       },
       --omnisharp = { "omnisharp", "--languageserver", "--hostPID", tostring(vim.fn.getpid())},
-      asm_lsp = {
-        cmd = { "asm-lsp" },
-        filetypes = { "asm", "s", "S" },
-      },
     }
 
     -- Ensure the servers and tools above are installed
