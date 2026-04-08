@@ -48,7 +48,7 @@ return { -- Highlight, edit, and navigate code
       -- additional_vim_regex_highlighting = { 'ruby' },
     },
     --indent = { enable = true, disable = { 'ruby' } },
-    indent = { enable = true },
+    indent = { enable = true, disable = { "c", "cpp" } },
   },
   -- Fallback config to handle edge cases
   config = function(_, opts)
