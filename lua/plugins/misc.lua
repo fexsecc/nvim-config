@@ -32,9 +32,22 @@ return {
   },
   {
     -- High-performance color highlighter
-    'norcalli/nvim-colorizer.lua',
-    config = function()
-      require('colorizer').setup()
-    end,
+    "NvChad/nvim-colorizer.lua",
+    event = "BufReadPre",
+    opts = {
+      user_default_options = {
+        RGB = true,
+        RRGGBB = true,
+        names = false,
+        RRGGBBAA = false,
+        AARRGGBB = false,
+        rgb_fn = false,
+        hsl_fn = false,
+        css = false,
+        css_fn = false,
+        mode = "background",
+        tailwind = false,
+      },
+    },
   },
 }
