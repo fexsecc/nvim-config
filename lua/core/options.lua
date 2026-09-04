@@ -13,12 +13,13 @@ vim.o.smartcase = true
 vim.o.cursorline = true
 
 -- Sync clipboard with OS
-if vim.fn.has('wsl') == 1 then
+local is_wsl = vim.uv.os_uname().release:lower():match("wsl") ~= nil
+if is_wsl then
   vim.g.clipboard = {
     name = 'win32yank',
     copy = {
-      ['+'] = 'win32yank.exe -i --lf',
-      ['*'] = 'win32yank.exe -i --lf',
+      ['+'] = 'win32yank.exe -i --crlf',
+      ['*'] = 'win32yank.exe -i --crlf',
     },
     paste = {
       ['+'] = 'win32yank.exe -o --lf',
