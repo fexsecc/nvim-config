@@ -146,6 +146,23 @@ return {
         filetypes = { "arduino" },
         root_markers = { "sketch.yaml", "sketch.json", "build", ".git" },
       },
+      rust_analyzer = {
+        settings = {
+          ["rust-analyzer"] = {
+            cargo = {
+              allFeatures = true,
+            },
+            check = {
+              command = "clippy",
+            },
+            procMacro = {
+              enable = true,
+            },
+          },
+        },
+        filetypes = { "rust" },
+        root_markers = { "Cargo.toml", "rust-project.json" },
+      },
     }
 
     local ensure_installed = vim.tbl_keys(servers)
