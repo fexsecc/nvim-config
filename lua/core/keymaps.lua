@@ -62,6 +62,8 @@ map("i", "<C-k>", "<Up>", { desc = "move up" })
 map('n', 's', '"_s', opts)
 map('v', 's', '"_s', opts)
 
+-- Substitute line without copying into register
+map('n', 'S', '"_S', opts)
 
 -- Delete char without copying into register
 map('n', 'x', '"_x', opts)
