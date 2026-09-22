@@ -19,7 +19,6 @@ require('lazy').setup({
     require('plugins.tmuxNavigator'),
     require('plugins.bufferline'),
     require('plugins.lualine'),
-    --require('plugins.treesitter'),
     require('plugins.telescope'),
     require('plugins.lsp'),
     require('plugins.autocompletion'),
@@ -27,3 +26,9 @@ require('lazy').setup({
     require('plugins.indentBlankline'),
     require('plugins.misc')
 })
+
+local ok, _ = pcall(require, "current_theme")
+if not ok then
+    -- Default to his
+    vim.cmd("colorscheme github_dark_high_contrast")
+end
